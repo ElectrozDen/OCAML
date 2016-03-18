@@ -20,6 +20,14 @@ match a with
 |[]-> failwith("aucun nombre")
 |e1::e2 -> horner (ccVc e1) (e2);;
 
+let nbVnatv2 (a:nombre) : int = 
+let b = List.rev a in let rec nblol (b) =
+match b with
+|[] -> 0
+|e1::s -> ccVc e1 + 10*(nblol s) in nblol b
+;;
+
+
 let rec snbVsnat (a: nombre list) : int list =
 match a with
 |[] -> []
